@@ -26,9 +26,15 @@ class HomeScreen extends StatelessWidget {
           },
           builder: (context, state) {
             if (state is InternetGainedState) {
-              return const Text('Connected');
+              return const Text(
+                'Connected',
+                style: TextStyle(fontSize: 30),
+              );
             } else if (state is InternetLostState) {
-              return const Text('Disconnected');
+              return const Text(
+                'Disconnected',
+                style: TextStyle(fontSize: 30),
+              );
             } else {
               return const CircularProgressIndicator();
             }

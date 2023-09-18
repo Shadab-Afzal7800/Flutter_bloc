@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
             } else if (state is InternetLostState) {
               return const Text('Disconnected');
             } else {
-              return const Text('Loading...');
+              return const CircularProgressIndicator();
             }
           },
         ),
